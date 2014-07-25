@@ -24,22 +24,22 @@ how they are actually handeld and dispatched is upto the event dispatch thread. 
 they are async or anything. it's not our responsibility.
   
   
-type EventCB state = EventData -> state -> state
-
-a := b = (a,b)
-type Prop = (JSString, JSString)
-type CB a= (JSString, EventCB a)
-
--- creates a virtual domNode
-vnode :: JSString -> [Prop] -> [CB state] -> [VNode] -> VNode
-
--- a simple counter widget might look like this:
-
-counterWidget count =
-  vnode "div" [] []
-    vnode "div" ["class":="boldText"] [] [ vtext . show $ count ]
-    vnode "button" [] [["onClick" := const (+1)] [ vtext "increase!"]
-    
+  type EventCB state = EventData -> state -> state
+  
+  a := b = (a,b)
+  type Prop = (JSString, JSString)
+  type CB a= (JSString, EventCB a)
+  
+  -- creates a virtual domNode
+  vnode :: JSString -> [Prop] -> [CB state] -> [VNode] -> VNode
+  
+  -- a simple counter widget might look like this:
+  
+  counterWidget count =
+    vnode "div" [] []
+      vnode "div" ["class":="boldText"] [] [ vtext . show $ count ]
+      vnode "button" [] [["onClick" := const (+1)] [ vtext "increase!"]
+      
     
     
 ... to becontinued.
