@@ -37,8 +37,9 @@ they are async or anything. it's not our responsibility.
     
     counterWidget count =
       vnode "div" [] []
-        vnode "div" ["class":="boldText"] [] [ vtext . show $ count ]
-        vnode "button" [] [["onClick" := const (+1)] [ vtext "increase!"]
+        [ vnode "div" ["class":="boldText"] [] [ vtext . show $ count ]
+        , vnode "button" [] [["onClick" := const (+1)] [ vtext "increase!"]
+        ]
         
     
     
