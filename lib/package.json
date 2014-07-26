@@ -36,6 +36,6 @@
   },
   "keywords": [],
   "dependencies": {
-    "virtual-dom": "0.0.16"
+    "mercury": "^6.0.1"
   }
 }
