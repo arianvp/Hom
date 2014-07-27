@@ -4,8 +4,12 @@ cabal-dev
 *.hi
 *.chi
 *.chs.h
+
+src/**/*.js
 .virtualenv
 .hsenv
 .cabal-sandbox/
 cabal.sandbox.config
 cabal.config
+main
+hom-lib-*
