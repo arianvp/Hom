@@ -6,6 +6,8 @@ module Hom.DOM
 , text
 , node
 , Node
+, Elem
+, (=:)
 )
 where
 
@@ -16,6 +18,8 @@ import Haste.Serialize
 import Haste.JSON
 import Haste.Prim
 
+
+a =: b = (a,b)
 newtype Patches = Patches JSAny deriving (Pack, Unpack)
 newtype Node = Node JSAny deriving (Pack, Unpack)
 newtype Nodes = Nodes JSAny deriving (Pack, Unpack)
