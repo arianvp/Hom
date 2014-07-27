@@ -13,3 +13,4 @@ cabal.sandbox.config
 cabal.config
 main
 hom-lib-*
+./*.js
