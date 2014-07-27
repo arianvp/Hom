@@ -5,6 +5,7 @@ module Hom.DOM
 , patch
 , text
 , node
+, Node
 )
 where
 
@@ -33,14 +34,14 @@ foreign import ccall jsText :: JSString -> Node
 foreign import ccall jsNode :: JSString -> Properties -> Nodes -> Node
 foreign import ccall lst2arr :: Ptr ([Node]) -> Nodes
 
-createElement :: Node -> IO Elem
-createElement = jsCreateElement
+createElement :: MonadIO m => Node -> m Elem
+createElement n = liftIO $ jsCreateElement n
 
 diff :: Node -> Node -> Patches
 diff = jsDiff
 
-patch :: Patches -> Elem -> IO ()
-patch = jsPatch
+patch :: MonadIO m => Patches -> Elem -> m ()
+patch p e= liftIO $ jsPatch p e
 
 text :: JSString -> Node
 text = jsText

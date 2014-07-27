@@ -20,7 +20,7 @@ library
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.6 && <4.7,
-                       haste-lib ==0.3
+                       haste-lib ==0.3, transformers >=0.3
   ghc-options:         "--with-js=./lib/bundle.js"
   hs-source-dirs:      src
   default-language:    Haskell2010
@@ -29,5 +29,5 @@ executable lol
   Main-Is: Main.hs
   hs-source-dirs: src
   ghc-options:         "--with-js=./lib/bundle.js"
-  build-depends: base >=4.6 && <4.7, haste-lib ==0.3
+  build-depends: base >=4.6 && <4.7, haste-lib >=0.3, transformers >=0.3
   other-modules: Hom.DOM
