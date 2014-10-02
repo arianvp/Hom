@@ -8,4 +8,4 @@ currently we're doing something similar at:
 
 http://github.com/ghcjs/ghcjs-vdom
 
-http://github.com/purescript-contrib/purescript-virtualdom
+https://github.com/purescript-contrib/purescript-virtual-dom
